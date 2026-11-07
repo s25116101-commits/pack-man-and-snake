@@ -1,0 +1,6 @@
+{
+  "name": "Snake × Pac-Man: Dual Universe",
+  "description": "Retro neon arcade game fusing Snake and Pac-Man mechanics with dual playable characters, competitive AI rival NPC, ghost hunting, and maze survival.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

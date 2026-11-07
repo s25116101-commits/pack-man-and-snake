@@ -1,0 +1,85 @@
+@import "tailwindcss";
+
+@layer base {
+  :root {
+    --font-arcade: 'Press Start 2P', cursive, monospace;
+    --font-orbitron: 'Orbitron', system-ui, sans-serif;
+    --font-tech: 'Share Tech Mono', monospace;
+  }
+}
+
+.font-arcade {
+  font-family: var(--font-arcade);
+}
+
+.font-orbitron {
+  font-family: var(--font-orbitron);
+}
+
+.font-tech {
+  font-family: var(--font-tech);
+}
+
+/* Neon glows */
+.neon-glow-cyan {
+  text-shadow: 0 0 5px #00f0ff, 0 0 15px rgba(0, 240, 255, 0.6), 0 0 30px rgba(0, 240, 255, 0.4);
+}
+
+.neon-glow-green {
+  text-shadow: 0 0 5px #10b981, 0 0 15px rgba(16, 185, 129, 0.6), 0 0 30px rgba(16, 185, 129, 0.4);
+}
+
+.neon-glow-yellow {
+  text-shadow: 0 0 5px #fbbf24, 0 0 15px rgba(251, 191, 36, 0.6), 0 0 30px rgba(251, 191, 36, 0.4);
+}
+
+.neon-glow-orange {
+  text-shadow: 0 0 5px #f97316, 0 0 15px rgba(249, 115, 22, 0.6), 0 0 30px rgba(249, 115, 22, 0.4);
+}
+
+.neon-glow-pink {
+  text-shadow: 0 0 5px #ec4899, 0 0 15px rgba(236, 72, 153, 0.6), 0 0 30px rgba(236, 72, 153, 0.4);
+}
+
+.neon-box-cyan {
+  box-shadow: 0 0 15px rgba(0, 240, 255, 0.35), inset 0 0 15px rgba(0, 240, 255, 0.15);
+}
+
+.neon-box-green {
+  box-shadow: 0 0 15px rgba(16, 185, 129, 0.35), inset 0 0 15px rgba(16, 185, 129, 0.15);
+}
+
+.neon-box-yellow {
+  box-shadow: 0 0 15px rgba(251, 191, 36, 0.35), inset 0 0 15px rgba(251, 191, 36, 0.15);
+}
+
+.neon-box-orange {
+  box-shadow: 0 0 15px rgba(249, 115, 22, 0.35), inset 0 0 15px rgba(249, 115, 22, 0.15);
+}
+
+/* Subtle CRT scanline effect */
+.crt-scanlines {
+  background: linear-gradient(
+    to bottom,
+    rgba(255, 255, 255, 0),
+    rgba(255, 255, 255, 0) 50%,
+    rgba(0, 0, 0, 0.25) 50%,
+    rgba(0, 0, 0, 0.25)
+  );
+  background-size: 100% 4px;
+  pointer-events: none;
+}
+
+/* Custom pulse animations */
+@keyframes neon-flicker {
+  0%, 19.999%, 22%, 62.999%, 64%, 64.999%, 70%, 100% {
+    opacity: 0.99;
+  }
+  20%, 21.999%, 63%, 63.999%, 65%, 69.999% {
+    opacity: 0.4;
+  }
+}
+
+.animate-flicker {
+  animation: neon-flicker 4s infinite;
+}
